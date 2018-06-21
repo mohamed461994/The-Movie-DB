@@ -1,0 +1,4 @@
+builds/
+.DS_Store
+*.generated.swift
+Pods/
