@@ -11,7 +11,7 @@ import Mapper
 struct MovieModel: Mappable {
     
     let id: Int
-    let votAverage: Float
+    let votAverage: Double
     let title: String
     let popularity: Double
     let posterPath: String
