@@ -16,7 +16,7 @@ class TopRatedRepository {
     
     // MARK: - properties
     var api: MoyaProvider<MoviesApi>
-    var realm: Realm?
+    var realm: Realm
     
     // MARK: - intializers
     init(api: MoyaProvider<MoviesApi>, realm: Realm) {
@@ -26,7 +26,7 @@ class TopRatedRepository {
     
     // MARK: - methods
     
-    func requestApi() -> Observable<[TopRatedMovieModel]> {
+    func requestFromApi() -> Observable<[TopRatedMovieModel]> {
         return api.rx.request(.topRatedMovies)
             .map(to: [TopRatedMovieModel].self, keyPath: "results")
             .do(onSuccess: { movies in
@@ -34,5 +34,20 @@ class TopRatedRepository {
             })
             .asObservable()
     }
+    
+    func getFromRealmTopRatedMovie() -> Observable<[TopRatedMovieModel]> {
+        var topMovieList = [TopRatedMovieModel]()
+        for movie in RealmTopRatedMovieModel.getAll(realm: realm) {
+            topMovieList.append(TopRatedMovieModel(managedObject: movie))
+        }
+        return Observable.just(topMovieList)
+    }
 
+    func getTopRatedMovies() -> Observable<[TopRatedMovieModel]> {
+        let apiObservable = requestFromApi().share() // share the observable
+        // take date from database until data comes from api
+        return Observable.merge(apiObservable, getFromRealmTopRatedMovie().takeUntil(apiObservable).takeWhile { (element) -> Bool in
+            return !element.isEmpty
+        })
+    }
 }

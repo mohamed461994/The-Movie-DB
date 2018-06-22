@@ -19,4 +19,13 @@ class RealmTopRatedMovieModel: Object {
     @objc dynamic var adult: Bool = false
     @objc dynamic var overview: String = ""
     
+    static func getAll(realm: Realm) -> Results<RealmTopRatedMovieModel> {
+        return realm.objects(RealmTopRatedMovieModel.self)
+    }
+    
+    static func deleteAll(realm: Realm) {
+        try? realm.write {
+            realm.delete(getAll(realm: realm))
+        }
+    }
 }
