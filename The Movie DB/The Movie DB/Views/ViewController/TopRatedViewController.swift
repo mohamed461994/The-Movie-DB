@@ -28,15 +28,14 @@ class TopRatedViewController: UIViewController {
         injectDependencies()
         setupBinding()
         collectionView.delegate = self
-
+        setupNavigation(vc: self, title: "Top Rated Movies")
     }
     
     func setupBinding() {
-        
-        
+   
         viewModel.topRatedMovies
-            .bind(to: collectionView.rx.items(cellIdentifier: "TopMovieCell", cellType: TopMoviesCollectionViewCell.self)) { index, movie, cell in
-                
+            .bind(to: collectionView.rx.items(cellIdentifier: "TopMovieCell", cellType: TopMoviesCollectionViewCell.self)) {
+                index, movie, cell in
                 cell.title.text = movie.title
                 let movieImageUrl = URL(string: imagesBaseURL+movie.posterPath)
                 cell.posterImage.kf.setImage(with: movieImageUrl)
@@ -45,16 +44,14 @@ class TopRatedViewController: UIViewController {
     }
 
     func injectDependencies() {
-        // inject repository with its dependancies
         let topRatedRepository = TopRatedRepository(api: MoyaProvider<MoviesApi>(), realm: try! Realm())
-        // inject viewModel with its dependancies
         viewModel = TopRatedMoviesViewModel(repo: topRatedRepository)
     }
+    
 }
 
 extension TopRatedViewController: UICollectionViewDelegateFlowLayout {
 
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width
         let cellWidth = (width - 21) / 3 // compute your cell width
