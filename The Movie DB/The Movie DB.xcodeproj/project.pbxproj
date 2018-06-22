@@ -13,6 +13,9 @@
 		041F7AB220DC70F3000502AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041F7AB120DC70F3000502AE /* Assets.xcassets */; };
 		041F7AB520DC70F3000502AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041F7AB320DC70F3000502AE /* LaunchScreen.storyboard */; };
 		041F7AC020DC70F3000502AE /* The_Movie_DBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7ABF20DC70F3000502AE /* The_Movie_DBTests.swift */; };
+		041F7AD420DC74A6000502AE /* MoviesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7AD320DC74A6000502AE /* MoviesApi.swift */; };
+		041F7AD720DC7857000502AE /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7AD620DC7857000502AE /* MovieModel.swift */; };
+		041F7AD920DC7A96000502AE /* TopRatedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7AD820DC7A96000502AE /* TopRatedRepository.swift */; };
 		251CDDE568C786BD99F630FA /* Pods_The_Movie_DB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5643526D623B498D90ECDDCC /* Pods_The_Movie_DB.framework */; };
 		33F3C83FCFB6D469606D32AE /* Pods_The_Movie_DB_The_Movie_DBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1DE1AB6BD6EFE31C5451F5 /* Pods_The_Movie_DB_The_Movie_DBTests.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +41,9 @@
 		041F7ABB20DC70F3000502AE /* The Movie DBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "The Movie DBTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		041F7ABF20DC70F3000502AE /* The_Movie_DBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Movie_DBTests.swift; sourceTree = "<group>"; };
 		041F7AC120DC70F3000502AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		041F7AD320DC74A6000502AE /* MoviesApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesApi.swift; sourceTree = "<group>"; };
+		041F7AD620DC7857000502AE /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		041F7AD820DC7A96000502AE /* TopRatedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedRepository.swift; sourceTree = "<group>"; };
 		5643526D623B498D90ECDDCC /* Pods_The_Movie_DB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Movie_DB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		729F1BEA9D81EEFA4592153E /* Pods-The Movie DB-The Movie DBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Movie DB-The Movie DBTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-The Movie DB-The Movie DBTests/Pods-The Movie DB-The Movie DBTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C1DE1AB6BD6EFE31C5451F5 /* Pods_The_Movie_DB_The_Movie_DBTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Movie_DB_The_Movie_DBTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,12 +95,12 @@
 		041F7AA920DC70F2000502AE /* The Movie DB */ = {
 			isa = PBXGroup;
 			children = (
-				041F7AAA20DC70F2000502AE /* AppDelegate.swift */,
-				041F7AAC20DC70F2000502AE /* ViewController.swift */,
-				041F7AAE20DC70F2000502AE /* Main.storyboard */,
-				041F7AB120DC70F3000502AE /* Assets.xcassets */,
-				041F7AB320DC70F3000502AE /* LaunchScreen.storyboard */,
 				041F7AB620DC70F3000502AE /* Info.plist */,
+				041F7AAA20DC70F2000502AE /* AppDelegate.swift */,
+				041F7ACF20DC7409000502AE /* ViewMopdels */,
+				041F7AD020DC7414000502AE /* Views */,
+				041F7ACB20DC73E1000502AE /* Models */,
+				041F7ACA20DC73BD000502AE /* SuportingFiles */,
 			);
 			path = "The Movie DB";
 			sourceTree = "<group>";
@@ -106,6 +112,81 @@
 				041F7AC120DC70F3000502AE /* Info.plist */,
 			);
 			path = "The Movie DBTests";
+			sourceTree = "<group>";
+		};
+		041F7ACA20DC73BD000502AE /* SuportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				041F7AB120DC70F3000502AE /* Assets.xcassets */,
+				041F7AB320DC70F3000502AE /* LaunchScreen.storyboard */,
+			);
+			path = SuportingFiles;
+			sourceTree = "<group>";
+		};
+		041F7ACB20DC73E1000502AE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				041F7ACE20DC73F9000502AE /* Repository */,
+				041F7ACD20DC73F2000502AE /* API */,
+				041F7ACC20DC73EB000502AE /* Entities */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		041F7ACC20DC73EB000502AE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				041F7AD620DC7857000502AE /* MovieModel.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		041F7ACD20DC73F2000502AE /* API */ = {
+			isa = PBXGroup;
+			children = (
+				041F7AD320DC74A6000502AE /* MoviesApi.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		041F7ACE20DC73F9000502AE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				041F7AD820DC7A96000502AE /* TopRatedRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		041F7ACF20DC7409000502AE /* ViewMopdels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewMopdels;
+			sourceTree = "<group>";
+		};
+		041F7AD020DC7414000502AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				041F7AD220DC7465000502AE /* ViewController */,
+				041F7AD120DC741F000502AE /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		041F7AD120DC741F000502AE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				041F7AAE20DC70F2000502AE /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		041F7AD220DC7465000502AE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				041F7AAC20DC70F2000502AE /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		0F2AA567D24D3EE22695D483 /* Frameworks */ = {
@@ -376,8 +457,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041F7AD720DC7857000502AE /* MovieModel.swift in Sources */,
 				041F7AAD20DC70F2000502AE /* ViewController.swift in Sources */,
+				041F7AD420DC74A6000502AE /* MoviesApi.swift in Sources */,
 				041F7AAB20DC70F2000502AE /* AppDelegate.swift in Sources */,
+				041F7AD920DC7A96000502AE /* TopRatedRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,7 +625,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7G792LCUAG;
 				INFOPLIST_FILE = "The Movie DB/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mohamedshaban.The-Movie-DB";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -557,7 +644,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7G792LCUAG;
 				INFOPLIST_FILE = "The Movie DB/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mohamedshaban.The-Movie-DB";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -574,7 +664,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7G792LCUAG;
 				INFOPLIST_FILE = "The Movie DBTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mohamedshaban.The-Movie-DBTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -592,7 +686,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7G792LCUAG;
 				INFOPLIST_FILE = "The Movie DBTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mohamedshaban.The-Movie-DBTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
