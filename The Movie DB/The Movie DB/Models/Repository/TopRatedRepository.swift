@@ -26,9 +26,9 @@ class TopRatedRepository {
     
     // MARK: - methods
     
-    func requestApi() -> Observable<[MovieModel]> {
+    func requestApi() -> Observable<[TopRatedMovieModel]> {
         return api.rx.request(.topRatedMovies)
-            .map(to: [MovieModel].self, keyPath: "results")
+            .map(to: [TopRatedMovieModel].self, keyPath: "results")
             .do(onSuccess: { movies in
                 print(movies)
             })
