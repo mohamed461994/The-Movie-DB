@@ -7,11 +7,13 @@ target 'The Movie DB' do
 
     pod 'RxSwift', '~> 4.0'
     pod 'RxCocoa', '~> 4.0'
+    pod 'RxDataSources', '~> 3.0'
     pod 'Moya/RxSwift', '~> 10.0'
     pod 'ModelMapper', '~> 7.4'
     pod 'Moya-ModelMapper/RxSwift', '~> 6.0'
     pod 'RealmSwift', '~> 3.0'
-
+    pod 'Kingfisher', '~> 4.8'
+    
   target 'The Movie DBTests' do
         pod 'Quick', '~> 1.2'
         pod 'Nimble', '~> 7.0'

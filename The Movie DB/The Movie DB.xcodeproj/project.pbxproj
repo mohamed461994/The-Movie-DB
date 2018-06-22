@@ -19,6 +19,8 @@
 		041F7ADC20DC7F97000502AE /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7ADB20DC7F97000502AE /* MoviesViewModel.swift */; };
 		041F7ADE20DC856B000502AE /* RealmTopRatedMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7ADD20DC856B000502AE /* RealmTopRatedMovieModel.swift */; };
 		041F7AE020DC8675000502AE /* PersistableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7ADF20DC8675000502AE /* PersistableProtocol.swift */; };
+		04C14C1120DD1ABE0042B721 /* MoviesNavigations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C14C1020DD1ABE0042B721 /* MoviesNavigations.swift */; };
+		04C14C1420DD21890042B721 /* TopMoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C14C1320DD21890042B721 /* TopMoviesCollectionViewCell.swift */; };
 		251CDDE568C786BD99F630FA /* Pods_The_Movie_DB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5643526D623B498D90ECDDCC /* Pods_The_Movie_DB.framework */; };
 		33F3C83FCFB6D469606D32AE /* Pods_The_Movie_DB_The_Movie_DBTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1DE1AB6BD6EFE31C5451F5 /* Pods_The_Movie_DB_The_Movie_DBTests.framework */; };
 /* End PBXBuildFile section */
@@ -50,6 +52,8 @@
 		041F7ADB20DC7F97000502AE /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		041F7ADD20DC856B000502AE /* RealmTopRatedMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTopRatedMovieModel.swift; sourceTree = "<group>"; };
 		041F7ADF20DC8675000502AE /* PersistableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistableProtocol.swift; sourceTree = "<group>"; };
+		04C14C1020DD1ABE0042B721 /* MoviesNavigations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesNavigations.swift; sourceTree = "<group>"; };
+		04C14C1320DD21890042B721 /* TopMoviesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviesCollectionViewCell.swift; sourceTree = "<group>"; };
 		5643526D623B498D90ECDDCC /* Pods_The_Movie_DB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Movie_DB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		729F1BEA9D81EEFA4592153E /* Pods-The Movie DB-The Movie DBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-The Movie DB-The Movie DBTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-The Movie DB-The Movie DBTests/Pods-The Movie DB-The Movie DBTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C1DE1AB6BD6EFE31C5451F5 /* Pods_The_Movie_DB_The_Movie_DBTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_The_Movie_DB_The_Movie_DBTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +179,8 @@
 		041F7AD020DC7414000502AE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04C14C1220DD21680042B721 /* Cell */,
+				04C14C0F20DD1A800042B721 /* Custom Views */,
 				041F7AD220DC7465000502AE /* ViewController */,
 				041F7AD120DC741F000502AE /* Storyboards */,
 			);
@@ -204,6 +210,22 @@
 				041F7ADF20DC8675000502AE /* PersistableProtocol.swift */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		04C14C0F20DD1A800042B721 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				04C14C1020DD1ABE0042B721 /* MoviesNavigations.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		04C14C1220DD21680042B721 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04C14C1320DD21890042B721 /* TopMoviesCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		0F2AA567D24D3EE22695D483 /* Frameworks */ = {
@@ -370,6 +392,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-The Movie DB-The Movie DBTests/Pods-The Movie DB-The Movie DBTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
@@ -377,6 +401,7 @@
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
@@ -384,6 +409,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
@@ -391,6 +418,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
@@ -441,6 +469,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-The Movie DB/Pods-The Movie DB-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-ModelMapper/Moya_ModelMapper.framework",
@@ -448,11 +478,14 @@
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ModelMapper.framework",
@@ -460,6 +493,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,7 +511,9 @@
 				041F7AD720DC7857000502AE /* TopRatedMovieModel.swift in Sources */,
 				041F7ADC20DC7F97000502AE /* MoviesViewModel.swift in Sources */,
 				041F7AE020DC8675000502AE /* PersistableProtocol.swift in Sources */,
+				04C14C1420DD21890042B721 /* TopMoviesCollectionViewCell.swift in Sources */,
 				041F7AAD20DC70F2000502AE /* TopRatedViewController.swift in Sources */,
+				04C14C1120DD1ABE0042B721 /* MoviesNavigations.swift in Sources */,
 				041F7ADE20DC856B000502AE /* RealmTopRatedMovieModel.swift in Sources */,
 				041F7AD420DC74A6000502AE /* MoviesApi.swift in Sources */,
 				041F7AAB20DC70F2000502AE /* AppDelegate.swift in Sources */,

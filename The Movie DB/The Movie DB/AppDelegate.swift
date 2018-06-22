@@ -8,11 +8,13 @@
 
 import UIKit
 
+let mainPath: String = "https://api.themoviedb.org/3/movie/"
+let imagesBaseURL: String = "http://image.tmdb.org/t/p/w185/"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

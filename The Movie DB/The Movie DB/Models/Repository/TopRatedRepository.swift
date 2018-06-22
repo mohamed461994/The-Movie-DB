@@ -30,7 +30,7 @@ class TopRatedRepository {
         return api.rx.request(.topRatedMovies)
             .map(to: [TopRatedMovieModel].self, keyPath: "results")
             .do(onSuccess: { movies in
-                print(movies)
+                //print(movies)
             })
             .asObservable()
     }

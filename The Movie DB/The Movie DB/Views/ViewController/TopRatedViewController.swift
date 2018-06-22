@@ -9,15 +9,39 @@
 import UIKit
 import RealmSwift
 import Moya
+import RxCocoa
+import RxSwift
+import Kingfisher
 
 class TopRatedViewController: UIViewController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var collectionView: UICollectionView!
+
+    // MARK: - Properties
     var viewModel: TopRatedMoviesViewModel!
     
+    // MARK: - Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+
         injectDependencies()
+        setupBinding()
+        collectionView.delegate = self
+
+    }
+    
+    func setupBinding() {
         
+        
+        viewModel.topRatedMovies
+            .bind(to: collectionView.rx.items(cellIdentifier: "TopMovieCell", cellType: TopMoviesCollectionViewCell.self)) { index, movie, cell in
+                
+                cell.title.text = movie.title
+                let movieImageUrl = URL(string: imagesBaseURL+movie.posterPath)
+                cell.posterImage.kf.setImage(with: movieImageUrl)
+            }.disposed(by: viewModel.disposeBag)
+        viewModel.bind()
     }
 
     func injectDependencies() {
@@ -25,6 +49,16 @@ class TopRatedViewController: UIViewController {
         let topRatedRepository = TopRatedRepository(api: MoyaProvider<MoviesApi>(), realm: try! Realm())
         // inject viewModel with its dependancies
         viewModel = TopRatedMoviesViewModel(repo: topRatedRepository)
+    }
+}
+
+extension TopRatedViewController: UICollectionViewDelegateFlowLayout {
+
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.bounds.width
+        let cellWidth = (width - 21) / 3 // compute your cell width
+        return CGSize(width: cellWidth, height: cellWidth / 0.6)
     }
 }
 

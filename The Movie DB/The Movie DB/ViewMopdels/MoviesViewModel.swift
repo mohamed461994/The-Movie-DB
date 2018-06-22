@@ -7,11 +7,14 @@
 //
 
 import RxSwift
+import RxCocoa
 
 class TopRatedMoviesViewModel {
     
     // MARK:- Properties
     let repo: TopRatedRepository
+    var topRatedMovies = BehaviorRelay<[TopRatedMovieModel]>(value: [])
+    let disposeBag = DisposeBag()
     
     // MARK:- Intializers
     init(repo: TopRatedRepository) {
@@ -19,5 +22,13 @@ class TopRatedMoviesViewModel {
     }
     
     // MARK:- Methods
+    
+    func bind() {
+        repo.requestFromApi().subscribe(onNext: { [weak self] moviesResponse in
+            self?.topRatedMovies.accept(moviesResponse)
+        }, onError: { _ in
+            
+        }).disposed(by: disposeBag)
+    }
     
 }
