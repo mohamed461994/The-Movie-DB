@@ -13,7 +13,7 @@ import RxCocoa
 import RxSwift
 import Kingfisher
 
-class TopRatedViewController: UIViewController {
+class MoviesViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
@@ -28,7 +28,7 @@ class TopRatedViewController: UIViewController {
         injectDependencies()
         setupBinding()
         collectionView.delegate = self
-        setupNavigation(vc: self, title: "Top Rated Movies")
+        setupNavigation(title: "Movies")
     }
     
     func setupBinding() {
@@ -50,7 +50,7 @@ class TopRatedViewController: UIViewController {
     
 }
 
-extension TopRatedViewController: UICollectionViewDelegateFlowLayout {
+extension MoviesViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width

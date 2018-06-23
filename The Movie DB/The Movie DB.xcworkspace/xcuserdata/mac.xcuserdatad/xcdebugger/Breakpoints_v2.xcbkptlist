@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "The Movie DB/Views/TabBarViewController/MoviesTabBareViewController.swift"
-            timestampString = "551378878.454702"
+            timestampString = "551450183.375056"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "addViewControllers()"
             landmarkType = "7">
          </BreakpointContent>

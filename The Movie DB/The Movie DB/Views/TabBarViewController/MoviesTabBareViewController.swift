@@ -12,30 +12,35 @@ class MoviesTabBareViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         addViewControllers()
-        
-        
     }
     
     func addViewControllers() {
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         
-        let firstViewController = UINavigationController(rootViewController: storyBoard.instantiateViewController(withIdentifier: "TopMovies"))
-        setTabBarItemValues(viewController: firstViewController, title: "History", image: nil)
-        firstViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 0)
+        let MoviesVC = UINavigationController(rootViewController: storyBoard.instantiateViewController(withIdentifier: "TopMovies"))
+        setTabBarItemValues(viewController: MoviesVC, image: UIImage(named: "Movies"))
         
-        let secondViewController = UINavigationController(rootViewController: storyBoard.instantiateViewController(withIdentifier: "TopMovies")) //(rootViewController: ))
-        setTabBarItemValues(viewController: secondViewController, title: "Search", image: nil)
-        secondViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
+        let tvShowsVC = UINavigationController(rootViewController: UIViewController())
+        tvShowsVC.setupNavigation(title: "Shows")
+        setTabBarItemValues(viewController: tvShowsVC, image: UIImage(named: "TV"))
         
-        let tabBarList = [firstViewController, secondViewController]
+        let searchShowsVC = UINavigationController(rootViewController: UIViewController())
+        searchShowsVC.setupNavigation(title: "Search")
+        setTabBarItemValues(viewController: searchShowsVC, image: UIImage(named: "Search"))
+        
+        let moreVC = UINavigationController(rootViewController: UIViewController())
+        moreVC.setupNavigation(title: "More")
+        setTabBarItemValues(viewController: moreVC, image: UIImage(named: "More"))
+        
+        let tabBarList = [MoviesVC, tvShowsVC, searchShowsVC, moreVC]
+        self.tabBar.tintColor = UIColor.black
         viewControllers = tabBarList
     }
     
-    func setTabBarItemValues(viewController: UIViewController, title: String, image: UIImage?) {
-        viewController.tabBarItem.title = title
+    func setTabBarItemValues(viewController: UIViewController, image: UIImage?) {
         viewController.tabBarItem.image = image
         viewController.tabBarItem.tag = 900
     }

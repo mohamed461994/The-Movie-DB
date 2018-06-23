@@ -183,8 +183,8 @@
 			children = (
 				04C14C1A20DD47E70042B721 /* TabBarViewController */,
 				04C14C1220DD21680042B721 /* Cell */,
-				04C14C0F20DD1A800042B721 /* Custom Views */,
-				041F7AD220DC7465000502AE /* ViewController */,
+				04C14C0F20DD1A800042B721 /* CustomViews */,
+				041F7AD220DC7465000502AE /* ViewControllers */,
 				041F7AD120DC741F000502AE /* Storyboards */,
 			);
 			path = Views;
@@ -198,12 +198,12 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		041F7AD220DC7465000502AE /* ViewController */ = {
+		041F7AD220DC7465000502AE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				041F7AAC20DC70F2000502AE /* TopRatedViewController.swift */,
 			);
-			path = ViewController;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		041F7ADA20DC7F4E000502AE /* Realm */ = {
@@ -215,12 +215,12 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
-		04C14C0F20DD1A800042B721 /* Custom Views */ = {
+		04C14C0F20DD1A800042B721 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				04C14C1D20DD5C860042B721 /* ViewControllersExtenstions.swift */,
 			);
-			path = "Custom Views";
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		04C14C1220DD21680042B721 /* Cell */ = {
