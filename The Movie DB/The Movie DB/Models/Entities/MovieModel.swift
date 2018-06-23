@@ -8,7 +8,7 @@
 
 import Mapper
 
-struct TopRatedMovieModel: Mappable {
+struct MovieModel: Mappable {
     
     let id: Int
     let votAverage: Double
@@ -31,7 +31,7 @@ struct TopRatedMovieModel: Mappable {
     }
 }
 
-extension TopRatedMovieModel: Persistable {
+extension MovieModel: Persistable {
     
     init(managedObject: RealmTopRatedMovieModel) {
         id = managedObject.id
