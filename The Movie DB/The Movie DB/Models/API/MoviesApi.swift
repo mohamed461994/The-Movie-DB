@@ -10,7 +10,8 @@ import Moya
 
 enum MoviesApi {
     case topRatedMovies
-    
+    case upcomingMovies
+    case nowPlaying
 }
 
 extension MoviesApi: TargetType {
@@ -22,6 +23,10 @@ extension MoviesApi: TargetType {
         switch self {
         case .topRatedMovies:
             return "top_rated"
+        case .upcomingMovies:
+            return "upcoming"
+        case .nowPlaying:
+            return "now_playing"
         }
     }
     
@@ -32,7 +37,7 @@ extension MoviesApi: TargetType {
     var task: Task {
         switch self {
             
-        case .topRatedMovies:
+        case .topRatedMovies, .upcomingMovies, .nowPlaying:
             return .requestParameters(parameters: ["api_key": "1e11705a93fb1729845e86a2b7a40837"], encoding: URLEncoding.default)
         }
     }
@@ -44,6 +49,10 @@ extension MoviesApi: TargetType {
     var sampleData: Data {
         switch self {
         case .topRatedMovies:
+            return "".data(using: .utf8)!
+        case .upcomingMovies:
+            return "".data(using: .utf8)!
+        case .nowPlaying:
             return "".data(using: .utf8)!
         }
     }

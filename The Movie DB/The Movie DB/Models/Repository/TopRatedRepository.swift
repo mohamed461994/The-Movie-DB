@@ -26,24 +26,24 @@ class TopRatedRepository {
     
     // MARK: - methods
     
-    func requestFromApi() -> Observable<[TopRatedMovieModel]> {
+    func requestFromApi() -> Observable<[MovieModel]> {
         return api.rx.request(.topRatedMovies)
-            .map(to: [TopRatedMovieModel].self, keyPath: "results")
+            .map(to: [MovieModel].self, keyPath: "results")
             .do(onSuccess: { movies in
-                //print(movies)
+                
             })
             .asObservable()
     }
     
-    func getFromRealmTopRatedMovie() -> Observable<[TopRatedMovieModel]> {
-        var topMovieList = [TopRatedMovieModel]()
+    func getFromRealmTopRatedMovie() -> Observable<[MovieModel]> {
+        var topMovieList = [MovieModel]()
         for movie in RealmTopRatedMovieModel.getAll(realm: realm) {
-            topMovieList.append(TopRatedMovieModel(managedObject: movie))
+            topMovieList.append(MovieModel(managedObject: movie))
         }
         return Observable.just(topMovieList)
     }
 
-    func getTopRatedMovies() -> Observable<[TopRatedMovieModel]> {
+    func getTopRatedMovies() -> Observable<[MovieModel]> {
         let apiObservable = requestFromApi().share() // share the observable
         // take date from database until data comes from api
         return Observable.merge(apiObservable, getFromRealmTopRatedMovie().takeUntil(apiObservable).takeWhile { (element) -> Bool in

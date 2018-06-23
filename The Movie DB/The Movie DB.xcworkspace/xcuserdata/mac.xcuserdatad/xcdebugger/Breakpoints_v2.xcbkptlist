@@ -6,17 +6,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "The Movie DB/Views/TabBarViewController/MoviesTabBareViewController.swift"
-            timestampString = "551450183.375056"
+            filePath = "The Movie DB/Views/ViewControllers/TopRatedViewController.swift"
+            timestampString = "551460619.239617"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "addViewControllers()"
-            landmarkType = "7">
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "MoviesViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "The_Movie_DB.MoviesViewController.topMoviesCollectionView.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UICollectionView&gt;"
+                  moduleName = "The Movie DB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Documents/The-Movie-DB/The%20Movie%20DB/The%20Movie%20DB/Views/ViewControllers/TopRatedViewController.swift"
+                  timestampString = "551459234.944768"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "79">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "The_Movie_DB.MoviesViewController.topMoviesCollectionView.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UICollectionView&gt;"
+                  moduleName = "The Movie DB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Documents/The-Movie-DB/The%20Movie%20DB/The%20Movie%20DB/Views/ViewControllers/TopRatedViewController.swift"
+                  timestampString = "551459234.948119"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "The_Movie_DB.MoviesViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; The_Movie_DB.MoviesViewController"
+                  moduleName = "The Movie DB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Documents/The-Movie-DB/The%20Movie%20DB/The%20Movie%20DB/Views/ViewControllers/TopRatedViewController.swift"
+                  timestampString = "551459234.9509979"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "The_Movie_DB.MoviesViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;The_Movie_DB.MoviesViewController&gt;"
+                  moduleName = "The Movie DB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Documents/The-Movie-DB/The%20Movie%20DB/The%20Movie%20DB/Views/ViewControllers/TopRatedViewController.swift"
+                  timestampString = "551459234.953756"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "55">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

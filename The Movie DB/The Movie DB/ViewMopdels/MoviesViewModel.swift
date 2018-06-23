@@ -8,27 +8,53 @@
 
 import RxSwift
 import RxCocoa
+import Moya
 
 class TopRatedMoviesViewModel {
     
     // MARK:- Properties
-    let repo: TopRatedRepository
-    var topRatedMovies = BehaviorRelay<[TopRatedMovieModel]>(value: [])
+    let topRatedRepo: TopRatedRepository
+    var topRatedMovies = BehaviorRelay<[MovieModel]>(value: [])
+    var upcomingMovies = BehaviorRelay<[MovieModel]>(value: [])
+    var popularMovies = BehaviorRelay<[MovieModel]>(value: [])
+    var nowPlayinggMovies = BehaviorRelay<[MovieModel]>(value: [])
     let disposeBag = DisposeBag()
-    
+
     // MARK:- Intializers
-    init(repo: TopRatedRepository) {
-        self.repo = repo
+    init(topRatedRepo: TopRatedRepository) {
+        self.topRatedRepo = topRatedRepo
     }
     
     // MARK:- Methods
     
     func bind() {
-        repo.requestFromApi().subscribe(onNext: { [weak self] moviesResponse in
+        // Top Movies
+        topRatedRepo.getTopRatedMovies().subscribe(onNext: { [weak self] moviesResponse in
             self?.topRatedMovies.accept(moviesResponse)
         }, onError: { _ in
-            
+            // TODO:-
         }).disposed(by: disposeBag)
+        
+        // Up Comming
+        topRatedRepo.api.rx.request(.upcomingMovies)
+            .map(to: [MovieModel].self, keyPath: "results")
+            .subscribe(onSuccess: { [weak self] upcomingMoviesResponse in
+                self?.upcomingMovies.accept(upcomingMoviesResponse)
+                }, onError: { _ in
+                    // TODO :-
+            }).disposed(by: disposeBag)
+        
+        // Now Playing
+        topRatedRepo.api.rx.request(.nowPlaying)
+            .map(to: [MovieModel].self, keyPath: "results")
+            .subscribe(onSuccess: { [weak self] upcomingMoviesResponse in
+                self?.nowPlayinggMovies.accept(upcomingMoviesResponse)
+                }, onError: { _ in
+                    // TODO :-
+            }).disposed(by: disposeBag)
+        
     }
+    
+    
     
 }

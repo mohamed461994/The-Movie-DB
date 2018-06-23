@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		041F7AAB20DC70F2000502AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7AAA20DC70F2000502AE /* AppDelegate.swift */; };
-		041F7AAD20DC70F2000502AE /* TopRatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7AAC20DC70F2000502AE /* TopRatedViewController.swift */; };
+		041F7AAD20DC70F2000502AE /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7AAC20DC70F2000502AE /* MovieViewController.swift */; };
 		041F7AB020DC70F2000502AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041F7AAE20DC70F2000502AE /* Main.storyboard */; };
 		041F7AB220DC70F3000502AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041F7AB120DC70F3000502AE /* Assets.xcassets */; };
 		041F7AB520DC70F3000502AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041F7AB320DC70F3000502AE /* LaunchScreen.storyboard */; };
 		041F7AC020DC70F3000502AE /* The_Movie_DBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7ABF20DC70F3000502AE /* The_Movie_DBTests.swift */; };
 		041F7AD420DC74A6000502AE /* MoviesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7AD320DC74A6000502AE /* MoviesApi.swift */; };
-		041F7AD720DC7857000502AE /* TopRatedMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7AD620DC7857000502AE /* TopRatedMovieModel.swift */; };
+		041F7AD720DC7857000502AE /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7AD620DC7857000502AE /* MovieModel.swift */; };
 		041F7AD920DC7A96000502AE /* TopRatedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7AD820DC7A96000502AE /* TopRatedRepository.swift */; };
 		041F7ADC20DC7F97000502AE /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7ADB20DC7F97000502AE /* MoviesViewModel.swift */; };
 		041F7ADE20DC856B000502AE /* RealmTopRatedMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7ADD20DC856B000502AE /* RealmTopRatedMovieModel.swift */; };
@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		041F7AA720DC70F2000502AE /* The Movie DB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Movie DB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		041F7AAA20DC70F2000502AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		041F7AAC20DC70F2000502AE /* TopRatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedViewController.swift; sourceTree = "<group>"; };
+		041F7AAC20DC70F2000502AE /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		041F7AAF20DC70F2000502AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		041F7AB120DC70F3000502AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		041F7AB420DC70F3000502AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		041F7ABF20DC70F3000502AE /* The_Movie_DBTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = The_Movie_DBTests.swift; sourceTree = "<group>"; };
 		041F7AC120DC70F3000502AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		041F7AD320DC74A6000502AE /* MoviesApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesApi.swift; sourceTree = "<group>"; };
-		041F7AD620DC7857000502AE /* TopRatedMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedMovieModel.swift; sourceTree = "<group>"; };
+		041F7AD620DC7857000502AE /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		041F7AD820DC7A96000502AE /* TopRatedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedRepository.swift; sourceTree = "<group>"; };
 		041F7ADB20DC7F97000502AE /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		041F7ADD20DC856B000502AE /* RealmTopRatedMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTopRatedMovieModel.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 		041F7ACC20DC73EB000502AE /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				041F7AD620DC7857000502AE /* TopRatedMovieModel.swift */,
+				041F7AD620DC7857000502AE /* MovieModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 		041F7AD220DC7465000502AE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				041F7AAC20DC70F2000502AE /* TopRatedViewController.swift */,
+				041F7AAC20DC70F2000502AE /* MovieViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -519,11 +519,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				041F7AD720DC7857000502AE /* TopRatedMovieModel.swift in Sources */,
+				041F7AD720DC7857000502AE /* MovieModel.swift in Sources */,
 				041F7ADC20DC7F97000502AE /* MoviesViewModel.swift in Sources */,
 				041F7AE020DC8675000502AE /* PersistableProtocol.swift in Sources */,
 				04C14C1420DD21890042B721 /* TopMoviesCollectionViewCell.swift in Sources */,
-				041F7AAD20DC70F2000502AE /* TopRatedViewController.swift in Sources */,
+				041F7AAD20DC70F2000502AE /* MovieViewController.swift in Sources */,
 				04C14C1C20DD48010042B721 /* MoviesTabBareViewController.swift in Sources */,
 				04C14C1E20DD5C860042B721 /* ViewControllersExtenstions.swift in Sources */,
 				041F7ADE20DC856B000502AE /* RealmTopRatedMovieModel.swift in Sources */,
