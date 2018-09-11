@@ -109,7 +109,6 @@
 			children = (
 				041F7AB620DC70F3000502AE /* Info.plist */,
 				041F7AAA20DC70F2000502AE /* AppDelegate.swift */,
-				041F7ACF20DC7409000502AE /* ViewMopdels */,
 				041F7AD020DC7414000502AE /* Views */,
 				041F7ACB20DC73E1000502AE /* Models */,
 				041F7ACA20DC73BD000502AE /* SuportingFiles */,
@@ -170,14 +169,6 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		041F7ACF20DC7409000502AE /* ViewMopdels */ = {
-			isa = PBXGroup;
-			children = (
-				041F7ADB20DC7F97000502AE /* MoviesViewModel.swift */,
-			);
-			path = ViewMopdels;
-			sourceTree = "<group>";
-		};
 		041F7AD020DC7414000502AE /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +192,7 @@
 		041F7AD220DC7465000502AE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				041F7ADB20DC7F97000502AE /* MoviesViewModel.swift */,
 				041F7AAC20DC70F2000502AE /* MovieViewController.swift */,
 			);
 			path = ViewControllers;
