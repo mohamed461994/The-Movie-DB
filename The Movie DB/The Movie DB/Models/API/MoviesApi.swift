@@ -36,7 +36,6 @@ extension MoviesApi: TargetType {
     
     var task: Task {
         switch self {
-            
         case .topRatedMovies, .upcomingMovies, .nowPlaying:
             return .requestParameters(parameters: ["api_key": "1e11705a93fb1729845e86a2b7a40837"], encoding: URLEncoding.default)
         }
@@ -55,9 +54,5 @@ extension MoviesApi: TargetType {
         case .nowPlaying:
             return "".data(using: .utf8)!
         }
-    }
-    
-    var validate: Bool { // Treat non 2XX response codes as error (onError)
-        return true
     }
 }

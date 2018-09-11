@@ -12,7 +12,7 @@ import Moya
 import Moya_ModelMapper
 import RxSwift
 
-class TopRatedRepository {
+class MovieRepository {
     
     // MARK: - properties
     var api: MoyaProvider<MoviesApi>
@@ -25,7 +25,6 @@ class TopRatedRepository {
     }
     
     // MARK: - methods
-    
     /// this function request top rated movies from api
     ///
     /// - Returns: observable array of movie model

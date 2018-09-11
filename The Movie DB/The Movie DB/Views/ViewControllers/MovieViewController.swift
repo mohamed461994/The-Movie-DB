@@ -33,8 +33,6 @@ class MoviesViewController: UIViewController {
         upcomingMoviesCollectionView.delegate = self
         nowPlayingMoviesCollectionView.delegate = self
         setupNavigation(title: "Movies")
-        
-        
     }
     
     func setupBinding() {
@@ -72,7 +70,7 @@ class MoviesViewController: UIViewController {
     }
 
     func injectDependencies() {
-        let topRatedRepository = TopRatedRepository(api: MoyaProvider<MoviesApi>(), realm: try! Realm())
+        let topRatedRepository = MovieRepository(api: MoyaProvider<MoviesApi>(), realm: try! Realm())
         viewModel = TopRatedMoviesViewModel(topRatedRepo: topRatedRepository)
     }
     

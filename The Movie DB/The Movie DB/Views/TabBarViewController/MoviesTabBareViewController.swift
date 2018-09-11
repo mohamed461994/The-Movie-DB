@@ -47,7 +47,4 @@ class MoviesTabBareViewController: UITabBarController {
     func setTabBarItemValues(viewController: UIViewController, image: UIImage?) {
         viewController.tabBarItem.image = image
     }
-
-    
-    
 }

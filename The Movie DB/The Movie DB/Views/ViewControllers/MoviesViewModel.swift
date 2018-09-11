@@ -13,7 +13,7 @@ import Moya
 class TopRatedMoviesViewModel {
     
     // MARK:- Properties
-    let topRatedRepo: TopRatedRepository
+    let topRatedRepo: MovieRepository
     var topRatedMovies = BehaviorRelay<[MovieModel]>(value: [])
     var upcomingMovies = BehaviorRelay<[MovieModel]>(value: [])
     var popularMovies = BehaviorRelay<[MovieModel]>(value: [])
@@ -21,7 +21,7 @@ class TopRatedMoviesViewModel {
     let disposeBag = DisposeBag()
 
     // MARK:- Intializers
-    init(topRatedRepo: TopRatedRepository) {
+    init(topRatedRepo: MovieRepository) {
         self.topRatedRepo = topRatedRepo
     }
     
@@ -52,9 +52,5 @@ class TopRatedMoviesViewModel {
                 }, onError: { _ in
                     // TODO :-
             }).disposed(by: disposeBag)
-        
     }
-    
-    
-    
 }

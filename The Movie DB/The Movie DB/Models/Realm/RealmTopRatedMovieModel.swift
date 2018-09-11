@@ -28,6 +28,4 @@ class RealmTopRatedMovieModel: Object {
             realm.delete(getAll(realm: realm))
         }
     }
-    
-    
 }

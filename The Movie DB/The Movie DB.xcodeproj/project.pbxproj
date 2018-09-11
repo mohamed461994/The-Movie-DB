@@ -15,7 +15,7 @@
 		041F7AC020DC70F3000502AE /* The_Movie_DBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7ABF20DC70F3000502AE /* The_Movie_DBTests.swift */; };
 		041F7AD420DC74A6000502AE /* MoviesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7AD320DC74A6000502AE /* MoviesApi.swift */; };
 		041F7AD720DC7857000502AE /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7AD620DC7857000502AE /* MovieModel.swift */; };
-		041F7AD920DC7A96000502AE /* TopRatedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7AD820DC7A96000502AE /* TopRatedRepository.swift */; };
+		041F7AD920DC7A96000502AE /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7AD820DC7A96000502AE /* MovieRepository.swift */; };
 		041F7ADC20DC7F97000502AE /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7ADB20DC7F97000502AE /* MoviesViewModel.swift */; };
 		041F7ADE20DC856B000502AE /* RealmTopRatedMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7ADD20DC856B000502AE /* RealmTopRatedMovieModel.swift */; };
 		041F7AE020DC8675000502AE /* PersistableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041F7ADF20DC8675000502AE /* PersistableProtocol.swift */; };
@@ -49,7 +49,7 @@
 		041F7AC120DC70F3000502AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		041F7AD320DC74A6000502AE /* MoviesApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesApi.swift; sourceTree = "<group>"; };
 		041F7AD620DC7857000502AE /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
-		041F7AD820DC7A96000502AE /* TopRatedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedRepository.swift; sourceTree = "<group>"; };
+		041F7AD820DC7A96000502AE /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
 		041F7ADB20DC7F97000502AE /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		041F7ADD20DC856B000502AE /* RealmTopRatedMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmTopRatedMovieModel.swift; sourceTree = "<group>"; };
 		041F7ADF20DC8675000502AE /* PersistableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistableProtocol.swift; sourceTree = "<group>"; };
@@ -164,7 +164,7 @@
 		041F7ACE20DC73F9000502AE /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				041F7AD820DC7A96000502AE /* TopRatedRepository.swift */,
+				041F7AD820DC7A96000502AE /* MovieRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -521,7 +521,7 @@
 				041F7ADE20DC856B000502AE /* RealmTopRatedMovieModel.swift in Sources */,
 				041F7AD420DC74A6000502AE /* MoviesApi.swift in Sources */,
 				041F7AAB20DC70F2000502AE /* AppDelegate.swift in Sources */,
-				041F7AD920DC7A96000502AE /* TopRatedRepository.swift in Sources */,
+				041F7AD920DC7A96000502AE /* MovieRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

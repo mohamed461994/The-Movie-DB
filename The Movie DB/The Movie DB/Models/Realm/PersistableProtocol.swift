@@ -8,11 +8,10 @@
 
 import RealmSwift
 
+/// this protocol is implemented by model in to be able to transform json mapper model to realm model and the realm model to mapper model to use data from api or realm
 public protocol Persistable {
     
     associatedtype ManagedObject: RealmSwift.Object
-    
     init(managedObject: ManagedObject)
-    
     func managedObject() -> ManagedObject
 }

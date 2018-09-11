@@ -12,5 +12,4 @@ class TopMoviesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var posterImage: UIImageView!
-    
 }
